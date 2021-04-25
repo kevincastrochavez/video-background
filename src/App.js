@@ -1,7 +1,10 @@
-import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Navbar from './components/Navbar/Navbar';
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+
+import "./App.css";
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path='/' exact />
+          <Route path="/" exact component={Home} />
         </Switch>
       </Router>
     </>
